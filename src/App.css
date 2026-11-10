@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: #ff5c04;
 }
 
 .post__avatar {
@@ -42,7 +43,7 @@
 }
 
 .post__user span {
-    color: #737373;
+    color: #ffffff;
     font-size: 12px;
 }
 
@@ -96,6 +97,10 @@
     font-size: 14px;
 }
 
+.icon-button--liked {
+  color: #f50b0b;
+}
+
 .post__caption {
     margin: 0;
     font-size: 14px;
@@ -109,7 +114,7 @@
 .header {
     height: 60px;
     border-bottom: 1px solid #dbdbdb;
-    background: #fff;
+    background:#fffdfd;;
     display: flex;
     align-items: center;
     justify-content: space-between;

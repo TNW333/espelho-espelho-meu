@@ -1,6 +1,15 @@
-import { FiBookmark, FiHeart, FiMessageCircle, FiMoreHorizontal, FiSend } from 'react-icons/fi'
+
+import{ useState } from 'react'  
+import { FiBookmark, FiMessageCircle, FiMoreHorizontal, FiSend, FiStar } from 'react-icons/fi'
 
 function Post({ post }) {
+
+    const [curtido, setCurtido] = useState(false);
+
+    function curtir() {
+      setCurtido(!curtido);
+      
+    }
   return (
     <article className="post">
       <header className="post__header">
@@ -15,15 +24,15 @@ function Post({ post }) {
       <img className="post__image" src={post.image} alt={post.alt} />
       <div className="post__content">
         <div className="post__actions">
-          <button className="icon-button" type="button" aria-label="Curtir">
-            <FiHeart />
+          <button className="icon-button" type="button" aria-label="Curtir" id='curtir' onClick={curtir} >
+            <FiStar />
           </button>
           <button className="icon-button" type="button" aria-label="Comentar">
             <FiMessageCircle />
           </button>
-          <button className="icon-button" type="button" aria-label="Enviar">
+          <button className="icon-button" type="button" aria-label="Enviar" >
             <FiSend /></button>
-          <button className="icon-button" type="button" aria-label="Salvar">
+          <button className="icon-button" type="button" aria-label="Salvar" id='salvar'>
             <FiBookmark />
           </button>
         </div>
@@ -32,6 +41,4 @@ function Post({ post }) {
       </div>
     </article>
   )
-}
-
-export default Post
+}export default Post
